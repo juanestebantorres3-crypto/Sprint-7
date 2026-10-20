@@ -5,6 +5,10 @@ import streamlit as st
 # Leer los datos del archivo CSV
 car_data = pd.read_csv('vehicles_us.csv')
 
+# Crear encabezado
+
+st.header('Selecciona el tipo de gráfico a crear:')
+
 # Crear los botones en la aplicación Streamlit
 hist_button = st.button('Construir histograma')
 scatter_button = st.button('Construir diagrama de dispersión')
