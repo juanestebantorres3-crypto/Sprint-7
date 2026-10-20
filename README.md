@@ -1,1 +1,3 @@
 # Sprint-7
+Enlace de acceso a render.com = 
+En este proyecto se realizan análisis exploratorios de datos para el dataset vehicles_us.csv que es un conjunto de datos de anuncios de venta de coches, dentro de este proyecto se usan librerias de pandas, streamlit y plotly para su ejecución, el objetivo es desarrollar herramientas intuitivas para el usuario y que sean de facil manejo para generar histogramas y diagramas de dispersión.
