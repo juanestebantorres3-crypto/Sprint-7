@@ -5,9 +5,9 @@ import streamlit as st
 # Leer los datos del archivo CSV
 car_data = pd.read_csv('C:/Users/admin/Downloads/Sprint-7/vehicles_us.csv')
 
-# Crear un botón en la aplicación Streamlit
+# Crear los botones en la aplicación Streamlit
 hist_button = st.button('Construir histograma')
-
+scatter_button = st.button('Construir diagrama de dispersión')
 # Lógica a ejecutar cuando se hace clic en el botón
 if hist_button:
     # Escribir un mensaje en la aplicación
@@ -29,11 +29,10 @@ if scatter_button:
 
     # Crear un diagrama de dispersión utilizando plotly.graph_object
     # Se crea una figura vacía y luego se añade un diagrama de dispersión
-    fig2 = go.Figure(data=[go.Histogram(x=car_data['odometer'])])
+    fig2= go.Figure(data=[go.Scatter(x=car_data['odometer'], y=car_data['price'], mode='markers')])
 
     # Opcional: Puedes añadir un título al gráfico si lo deseas
-    fig2.update_layout(title_text='Distribución del Odómetro')
+    fig2.update_layout(title_text='Relación entre Odómetro y Precio')
 
-    # Mostrar el gráfico Plotly interactivo en la aplicación Streamlit
-    # 'use_container_width=True' ajusta el ancho del gráfico al contenedor
+    # Mostrar el gráfico Plotly
     st.plotly_chart(fig2, use_container_width=True)
